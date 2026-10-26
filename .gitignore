@@ -1,0 +1,75 @@
+# ==============================================================================
+# Open-CV (.gitignore) — Rust + Tauri v2 + React / TypeScript
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Rust & Cargo (Tauri Backend)
+# ------------------------------------------------------------------------------
+debug/
+target/
+src-tauri/target/
+*.exe
+**/*.rs.bk
+*.pdb
+**/mutants.out*/
+rustc-ice-*.txt
+
+# Fichiers temporaires générés par Tauri
+src-tauri/gen/
+
+# ------------------------------------------------------------------------------
+# 2. Node & Frontend (React / Vite / Tailwind)
+# ------------------------------------------------------------------------------
+node_modules/
+dist/
+dist-ssr/
+.vite/
+
+# Logs de paquets
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# 3. Variables d'Environnement & Données Sensibles
+# ------------------------------------------------------------------------------
+# Protection absolue contre la fuite de clés API (Google Gemini, etc.)
+.env
+.env.*
+!.env.example
+
+# Profils et configurations locales de test
+profile.json
+config.json
+
+# ------------------------------------------------------------------------------
+# 4. Éditeurs, IDEs & Outils
+# ------------------------------------------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------------------------
+# 5. Fichiers Système
+# ------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~

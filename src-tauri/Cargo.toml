@@ -1,0 +1,27 @@
+[package]
+name = "opencv"
+version = "0.9.0"
+description = "Desktop ATS Resume Optimizer & Cover Letter Generator with Gemini & MCP"
+authors = ["Froizz"]
+edition = "2021"
+
+[lib]
+name = "opencv_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0", features = [] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.38", features = ["full"] }
+reqwest = { version = "0.12", features = ["json"] }
+thiserror = "2.0"
+dirs = "6.0"
+aes-gcm = "0.10"
+rand = "0.8"
+sha2 = "0.10"
+base64 = "0.22"
+chrono = { version = "0.4", features = ["serde"] }
