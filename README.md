@@ -7,13 +7,18 @@
 [![Release](https://img.shields.io/github/v/release/Froizz7/Open-CV?color=10b981&label=Release)](https://github.com/Froizz7/Open-CV/releases/latest)
 [![Free to Use](https://img.shields.io/badge/Free%20to%20Use-100%25-brightgreen.svg)](#license)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Vibecoded](https://img.shields.io/badge/Vibecoded-100%25-9333ea.svg)](#)
 [![Rust](https://img.shields.io/badge/Rust-Tauri%20v2-orange.svg)](https://v2.tauri.app/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178c6.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3-61dafb.svg)](https://react.dev/)
 
-**Open-CV** is an open-source ATS resume builder with AI.
+**Open-CV** is an open-source ATS resume builder with AI — 100% vibecoded.
 
-[Downloads](#-downloads) • [Features](#-features) • [Security & Privacy](#-security--privacy) • [Build from Source](#-build-from-source) • [License](#-license)
+[Downloads](#-downloads) • [Preview](#-preview) • [Features](#-features) • [Demos](#-demos) • [Security & Privacy](#-security--privacy) • [License](#-license)
+
+<br />
+
+<img src="assets/app-preview.png" alt="Open-CV Interface Preview" style="border-radius: 12px; max-width: 100%; border: 1px solid #27272a; box-shadow: 0 20px 40px rgba(0,0,0,0.4);" />
 
 </div>
 
@@ -43,28 +48,35 @@ Installers and packages are available on the [**GitHub Releases page**](https://
 
 ---
 
+## 🎬 Demos
+
+### ⚖️ Multi-Job Match Comparator
+Compare multiple job offers against your profile simultaneously with deterministic compatibility scoring.
+
+<img src="assets/JobMatchDemo.gif" alt="Multi-Job Match Demo" width="100%" style="border-radius: 10px; border: 1px solid #27272a;" />
+
+<br />
+
+### 🎙️ Pedagogical Interview Simulator
+Practice targeted interview questions with instant AI feedback, scoring, and STAR-method recommendations.
+
+<img src="assets/InterviewDemo.gif" alt="Interview Simulator Demo" width="100%" style="border-radius: 10px; border: 1px solid #27272a;" />
+
+<br />
+
+### 🛡️ Security Vault & Settings
+Isolated AES-256-GCM hardware-derived vault for API keys with active prompt injection protection.
+
+<img src="assets/SettingsDemo.gif" alt="Settings & Security Vault Demo" width="100%" style="border-radius: 10px; border: 1px solid #27272a;" />
+
+---
+
 ## 🔒 Security & Privacy
 
 * **100% Local**: All resumes, profiles, and data stay exclusively on your computer.
 * **Encrypted Vault**: API keys and secrets are protected with AES-256-GCM hardware-derived encryption (`secrets.enc`).
 * **Active AI Security**: Real-time detection of prompt injections and invisible Unicode characters in imported documents.
 * **Zero Telemetry**: No tracking, analytics, or external requests other than your configured AI provider.
-
----
-
-## 🛠️ Build from Source
-
-### Prerequisites
-* [Node.js](https://nodejs.org/) (v20+)
-* [Rust](https://www.rust-lang.org/) (v1.80+)
-
-### Setup & Run
-```bash
-git clone https://github.com/Froizz7/Open-CV.git
-cd Open-CV
-npm install
-npm run tauri dev
-```
 
 ---
 
