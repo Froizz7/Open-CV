@@ -7,14 +7,13 @@
 [![Release](https://img.shields.io/github/v/release/Froizz7/Open-CV?color=10b981&label=Release)](https://github.com/Froizz7/Open-CV/releases/latest)
 [![Free to Use](https://img.shields.io/badge/Free%20to%20Use-100%25-brightgreen.svg)](#license)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Vibecoded](https://img.shields.io/badge/Vibecoded-100%25-9333ea.svg)](#)
 [![Rust](https://img.shields.io/badge/Rust-Tauri%20v2-orange.svg)](https://v2.tauri.app/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178c6.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3-61dafb.svg)](https://react.dev/)
 
-**Open-CV** is an open-source ATS resume builder with AI — 100% vibecoded.
+**Open-CV** is a local-first open-source ATS resume builder with AI and zero telemetry.
 
-[Downloads](#-downloads) • [Preview](#-preview) • [Features](#-features) • [Demos](#-demos) • [Security & Privacy](#-security--privacy) • [License](#-license)
+[Downloads](#-downloads) • [Features](#-features) • [Demos](#-demos) • [Security & Privacy](#-security--privacy) • [License](#-license)
 
 <br />
 
@@ -50,24 +49,23 @@ Installers and packages are available on the [**GitHub Releases page**](https://
 
 ## 🎬 Demos
 
-### ⚖️ Multi-Job Match Comparator
-Compare multiple job offers against your profile simultaneously with deterministic compatibility scoring.
+### Job Match
+Compare multiple job offers against your profile.
 
 <img src="assets/JobMatchDemo.gif" alt="Multi-Job Match Demo" width="100%" style="border-radius: 10px; border: 1px solid #27272a;" />
 
 <br />
 
-### 🎙️ Pedagogical Interview Simulator
-Practice targeted interview questions with instant AI feedback, scoring, and STAR-method recommendations.
+### Interview
+Practice targeted interview questions with instant AI feedback.
 
 <img src="assets/InterviewDemo.gif" alt="Interview Simulator Demo" width="100%" style="border-radius: 10px; border: 1px solid #27272a;" />
 
 <br />
 
-### 🛡️ Security Vault & Settings
-Isolated AES-256-GCM hardware-derived vault for API keys with active prompt injection protection.
+### Settings
 
-<img src="assets/SettingsDemo.gif" alt="Settings & Security Vault Demo" width="100%" style="border-radius: 10px; border: 1px solid #27272a;" />
+<img src="assets/SettingsDemo.gif" alt="Settings Demo" width="100%" style="border-radius: 10px; border: 1px solid #27272a;" />
 
 ---
 
