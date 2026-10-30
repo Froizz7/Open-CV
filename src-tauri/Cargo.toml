@@ -1,6 +1,6 @@
 [package]
 name = "opencv"
-version = "0.9.1"
+version = "0.9.2"
 description = "Desktop ATS Resume Optimizer & Cover Letter Generator with Gemini & MCP"
 authors = ["Froizz"]
 edition = "2021"
