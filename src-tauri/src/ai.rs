@@ -448,15 +448,18 @@ impl UniversalAiClient {
             &self.config.model
         };
 
-        let payload = json!({
+        let mut payload = json!({
             "model": model,
             "messages": [
                 { "role": "system", "content": system },
                 { "role": "user", "content": user }
             ],
-            "response_format": { "type": "json_object" },
             "temperature": 0.2
         });
+
+        if self.config.provider == ProviderType::OpenAi {
+            payload["response_format"] = json!({ "type": "json_object" });
+        }
 
         let resp = self.client.post(&endpoint).headers(headers).json(&payload).send().await?;
         let status = resp.status();
@@ -559,10 +562,49 @@ pub fn extract_json_payload(input: &str) -> String {
     }
 
     if let (Some(first), Some(last)) = (trimmed.find('{'), trimmed.rfind('}')) {
+        let first_bracket = trimmed.find('[');
+        if let Some(fb) = first_bracket {
+            if fb < first {
+                if let Some(last_bracket) = trimmed.rfind(']') {
+                    if last_bracket > fb {
+                        return trimmed[fb..=last_bracket].trim().to_string();
+                    }
+                }
+            }
+        }
+        if last > first {
+            return trimmed[first..=last].trim().to_string();
+        }
+    }
+
+    if let (Some(first), Some(last)) = (trimmed.find('['), trimmed.rfind(']')) {
         if last > first {
             return trimmed[first..=last].trim().to_string();
         }
     }
 
     trimmed.to_string()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_extract_json_object() {
+        let raw = "Here is the result: {\"status\": \"ok\", \"score\": 95} Hope this helps!";
+        assert_eq!(extract_json_payload(raw), "{\"status\": \"ok\", \"score\": 95}");
+    }
+
+    #[test]
+    fn test_extract_json_array() {
+        let raw = "Questions: [{\"id\": 1, \"text\": \"Tell me about yourself\"}] Thanks.";
+        assert_eq!(extract_json_payload(raw), "[{\"id\": 1, \"text\": \"Tell me about yourself\"}]");
+    }
+
+    #[test]
+    fn test_extract_markdown_fenced() {
+        let raw = "```json\n{\"key\": \"value\"}\n```";
+        assert_eq!(extract_json_payload(raw), "{\"key\": \"value\"}");
+    }
 }
